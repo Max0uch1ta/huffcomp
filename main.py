@@ -20,6 +20,9 @@ if args.compress == True:
     heap = helpers.dic_to_heap(freq)
     print(freq)
     print(heap)
+    tree = helpers.heap_to_htree(heap)
+    print(heap)
+    print(tree)
 
     
 elif args.decompress == True:
