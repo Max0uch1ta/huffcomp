@@ -23,7 +23,15 @@ if args.compress == True:
     tree = helpers.heap_to_htree(heap)
     print(heap)
     print(tree)
+    huff_table = {}
+    helpers.get_hdict(tree, huff_table)
+    print(huff_table)
+    print("\n\n")
+    print(tree.tree_to_str())
 
+    for char in huff_table:
+        if len(huff_table[char]) < 5:
+            print(f"{char} : {huff_table[char]}")
     
 elif args.decompress == True:
     print("decompressing")
